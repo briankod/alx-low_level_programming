@@ -8,13 +8,13 @@
 int main(void)
 {
 	int i, d, n;
-	for(i = '0'; i < '9'; ++i)
+	for (i = '0'; i < '9'; ++i)
 	{
-		for(d = i + 1; d <= '9'; ++d)
+		for (d = i + 1; d <= '9'; ++d)
 		{
-			for(n = d + 1; n <= '9'; ++n)
+			for (n = d + 1; n <= '9'; ++n)
 			{
-				if((d != i) != n)
+				if ((d != i) != n)
 				{
 					putchar(i);
 					putchar(d);
