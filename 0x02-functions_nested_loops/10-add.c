@@ -2,8 +2,8 @@
 
 /**
  * add - check the code.
- * @a - an input integer.
- * @b - an input integer.
+ * @a: an integer a.
+ * @b: an integer b.
  * Return: sum.
  */
 int add(int a, int b)
