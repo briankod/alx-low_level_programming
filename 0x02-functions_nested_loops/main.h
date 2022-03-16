@@ -6,5 +6,5 @@ int _isalpha(int c);
 int print_sign(int n);
 int _abs(int r);
 int print_last_digit(int r);
-void jack bauer(void);
+void jack_bauer(void);
 void times_table(void);
