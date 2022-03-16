@@ -2,7 +2,7 @@
 
 /**
  * _abs - check the code.
- *
+ * @r: an input integer.
  * Return: absolute value.
  */
 int _abs(int r)

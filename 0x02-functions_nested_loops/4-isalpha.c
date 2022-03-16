@@ -2,19 +2,19 @@
 
 /**
  * _isalpha - check the code.
- *
+ * @c: an input character.
  * Return: 0 or 1.
  */
 int _isalpha(int c)
 {
-	char c, C;
+	char ch, Ch;
 	int i = 0;
 
-	for (c = 'a'; c <= 'z'; ++c)
+	for (ch = 'a'; ch <= 'z'; ++ch)
 	{
-		for (C = 'A'; C <= 'Z'; ++C)
+		for (Ch = 'A'; Ch <= 'Z'; ++Ch)
 		{
-			if (c == c || c == C)
+			if (c == ch || c == Ch)
 				i = 1;
 		}
 	}
