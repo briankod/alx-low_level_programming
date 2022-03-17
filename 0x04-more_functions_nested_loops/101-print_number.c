@@ -3,7 +3,7 @@ void print_integer(int m);
 
 /**
  * print_number - check the code.
- *
+ * @n: an input integer.
  * Return: nothing.
  */
 void print_number(int n)
@@ -12,7 +12,7 @@ void print_number(int n)
 		_putchar('0');
 	else if (n < 0)
 	{
-		_putchar('_');
+		_putchar('-');
 		print_integer(n * -1);
 	}
 	else
@@ -21,7 +21,7 @@ void print_number(int n)
 
 /**
  * print_integer - check the code.
- *
+ * @m: an input unsigned integer.
  * Return: nothing.
  */
 void print_integer(int m)
