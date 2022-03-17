@@ -7,17 +7,17 @@
  */
 int _isdigit(int c)
 {
-	char C = '0';
-	int i = 0;
+	char i = '0';
+	int isdigit = 0;
 
-	for (; C <= '9'; C++)
+	for (; i <= '9'; i++)
 	{
-		if (C == c)
+		if (i == c)
 		{
-			i = 1;
+			isdigit = 1;
 			break;
 		}
 	}
 
-	return (i);
+	return (isdigit);
 }
