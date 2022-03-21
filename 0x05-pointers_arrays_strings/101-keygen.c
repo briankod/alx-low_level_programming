@@ -1,5 +1,6 @@
 #include <math.h>
 #include <stdio.h>
+#include<stdlib.h>
 #include <time.h>
 
 /**
@@ -11,13 +12,13 @@ void random_valid_passwords(int n)
 {
 	int i = 0;
 	int randomizer = 0;
-	srand((unsigned int)(time(NULL)));
 	char numbers[] = "0123456789";
 	char letter[] = "abcdefghijklmnopqrstuvwxyz";
 	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char symbols[] = "!@#$^&*?";
-	char password[n];
+	char password[];
 
+	srand(time(0));
 	randomizer = rand() % 4;
 
 	for (i = 0; i < n; i++)
