@@ -26,7 +26,6 @@ void random_valid_passwords(int len, int num)
 		temp = len;
 	}
 	printf("\n");
-	retutn EXIT_SUCCESS;
 }
 
 /**
