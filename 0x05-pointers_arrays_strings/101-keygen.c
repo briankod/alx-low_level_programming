@@ -8,48 +8,26 @@
  * @n: an input integer.
  * Return: nothing.
  */
-void random_valid_passwords(int n)
+void random_valid_passwords(int len, int num)
 {
-	int i = 0;
-	int randomizer = 0;
-	char numbers[] = "0123456789";
-	char letter[] = "abcdefghijklmnopqrstuvwxyz";
-	char LETTER[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char symbols[] = "!@#$^&*?";
-	char password[];
+	int temp;
 
-	srand(time(0));
-	randomizer = rand() % 4;
+	srand((unsigned int)(time(0)));
 
-	for (i = 0; i < n; i++)
+	while (num--)
 	{
-		if (randomizer == 1)
+		temp = len;
+		printf("\n");
+		while (temp--)
 		{
-			password[i] = numbers[rand() % 10];
-			randomizer = rand % 4;
-			printf("%c", password[i]);
+			putchar(rand() % 56 + 65);
+			srand(rand());
 		}
-		else if (randomizer == 2)
-		{
-			password[i] = numbers[rand() % 8];
-			randomizer = rand % 4;
-			printf("%c", password[i]);
-		}
-		else if (randomizer == 3)
-		{
-			password[i] = numbers[rand() % 26];
-			randomizer = rand % 4;
-			printf("%c", password[i]);
-		}
-		else
-		{
-			password[i] = numbers[rand() % 26];
-			randomizer = rand % 4;
-			printf("%c", password[i]);
-		}
+		temp = len;
 	}
+	printf("\n");
+	retutn EXIT_SUCCESS;
 }
-
 
 /**
  * main - Entry point.
@@ -58,9 +36,10 @@ void random_valid_passwords(int n)
  */
 int main()
 {
-	int n = 14;
+	int len = 14;
+	int num = 1;
 
-	random_valid_passwords(n);
+	random_valid_passwords(len, num);
 
 	return (0);
 }
