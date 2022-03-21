@@ -50,6 +50,7 @@ void random_valid_passwords(int n)
 	}
 }
 
+
 /**
  * main - Entry point.
  *
