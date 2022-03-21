@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _strcpy - check the code.
  * @dest: a pointer to destination of string.
@@ -9,7 +10,7 @@ char *_strcpy(char *dest, char *src)
 {
 	char *c = dest;
 
-	while 
+	while
 		((*dest++ = *src++));
 	return (c);
 }
