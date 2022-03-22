@@ -1,44 +1,24 @@
 #include <stdio.h>
-#include<stdlib.h>
+#include <stdlib.h>
 #include <time.h>
-
 /**
- * random_valid_passwords - check the code.
- * @len: an input integer.
- * @num: an input integer.
- * Return: nothing.
+ * main - generates keygen
+ * Return: Always 0
  */
-void random_valid_passwords(int len, int num)
+int main(void)
 {
-	int temp;
+	int r = 0, c = 0;
+	time_t t;
 
-	srand((unsigned int)(time(0)));
-
-	while (num--)
+	srand((unsigned int) time(&t));
+	while (c < 2772)
 	{
-		temp = len;
-		printf("\n");
-		while (temp--)
-		{
-			putchar(rand() % 100 + 1);
-			srand(rand());
-		}
-		temp = len;
+		r = rand() % 128;
+		if ((c + r) > 2772)
+			break;
+		c = c + r;
+		printf("%c", r);
 	}
-	printf("\n");
-}
-
-/**
- * main - Entry point.
- *
- * Return: Always 0.
- */
-int main()
-{
-	int len = 14;
-	int num = 1;
-
-	random_valid_passwords(len, num);
-
+	printf("%c\n", (2772 - c));
 	return (0);
 }
