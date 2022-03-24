@@ -8,26 +8,20 @@
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	int srclen = 0, i = 0;
-	char *temp = dest, *start = src;
+	int i = 0, d = 0;
 
-	while(*src)
+	while (*(dest + i) != '\0')
 	{
-		srclen++;
-		src++;
+		i++;
 	}
 
-	while(*dest)
-		dest++;
-
-	if (n > srclen)
-		n = srclen;
-
-	src = start;
-
-	for (; i < n; i++)
-		*dest++ = *src++;
-
-	*dest = '\0';
-	return (temp);
+	while (d < n)
+	{
+		*(dest + i) = *(src + d);
+		if (*(src + d) == '\0')
+			break;
+		i++;
+		d++;
+	}
+	return (dest);
 }
