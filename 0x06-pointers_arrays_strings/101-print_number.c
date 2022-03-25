@@ -7,9 +7,7 @@
  */
 void print_number(int n)
 {
-	long m; 
-	int c; 
-	long num; 
+	int m, c, num; 
 
 	num = n;
 	
@@ -29,8 +27,8 @@ void print_number(int n)
 		else
 			c = 0;
 	}
-
-	/* count down */
+	
+	
 	while (num >= 0)
 	{
 		if (m == 1)
