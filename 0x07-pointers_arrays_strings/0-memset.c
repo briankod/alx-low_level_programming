@@ -7,9 +7,9 @@
  * @n: number of bytes to filled.
  * Return: a pointer to the memory area s.
  */
-char *memset(char *s, char b, unsigned int n);
+char *_memset(char *s, char b, unsigned int n);
 {
-	char *ptr = s;
+	char **ptr = s;
 	
 	while(n--)
 	{
