@@ -2,11 +2,12 @@
 
 /**
  * _memset - a function that fills memory with a constant byte.
- * @s: starting address of the memory to be filled.
+ * @s: a pointer to the memory area to be filled.
  * @b: char value to be filled.
  * @n: number of bytes to filled.
- * Return: returns pointer to location filled
+ * Return: returns a pointer to the memory area s.
  */
+
 char *_memset(char *s, char b, unsigned int n)
 {
 	unsigned int i;
