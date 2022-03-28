@@ -9,7 +9,7 @@
  */
 char *memset(char *s, char b, unsigned int n);
 {
-	int **ptr = s;
+	int *ptr = s;
 	
 	while(n--)
 	{
