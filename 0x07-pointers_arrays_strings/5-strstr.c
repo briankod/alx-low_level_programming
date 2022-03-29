@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdlb.h>
+#include <stdio.h>
 
 /**
  * _strstr - a function that locates a substring.
@@ -9,22 +9,22 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j = 0;
-
-	while (needle[j] != '\0')
-		j++;
+	char *startn = needle, *starth = haystack;
 
 	while (*haystack)
 	{
-		for (i = 0; needle[i]; i++)
+		starth = haystack;
+		needle = startn;
+
+		while (*haystack == *needle)
 		{
-			if (haystack[i] != needle[i])
-				break;
-		}
-		if (i != j)
 			haystack++;
-		else
+			needle++;
+		}
+
+		if (*needle == '\0')
 			return (haystack);
+		haystack = starth + 1;
 	}
 	return (NULL);
 }
