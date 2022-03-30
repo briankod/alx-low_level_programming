@@ -39,13 +39,13 @@ int is_palindrome(char *s)
  * @len: the lenght of the string s.
  * Return: a reverse string
  */
-int helper_palindrome(char *s,int len)
+int helper_palindrome(char *s, int len)
 {
 	if (len <= 1)
 		return (1);
 	else if (*s == *(s + len - 1))
 	{
-		return(helper_palindrome(s + 1, len - 2));
+		return (helper_palindrome(s + 1, len - 2));
 	}
 	else
 		return (0);
