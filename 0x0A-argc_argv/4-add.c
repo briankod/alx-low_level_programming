@@ -1,28 +1,30 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype>
 
 /**
- * main - a program that multiplies two numbers.
- * argc: arguments' counter.
- * argv: arguments' values.
+ * main - a program that adds positive numbers.
+ * @argc: arguments' counter.
+ * @argv: arguments' values.
  * Return: Always 0.
  */
-int main(int argc, char **argv)
+int main (int argc, char **argv)
 {
-	int num1, num2, result;
+	int num, result = 0, i;
 
-	if (argc != 3)
+	while (argc-- > 1)
 	{
-		printf("Error\n");
-		return (1);
+		for (i = 0; argv[argc][i]; i++)
+		{
+			if (!(isdigit (argv[argc][i])))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		num = atoi(argv[argc]);
+		result += num;
 	}
-	else
-	{
-		num1 = atoi(argv[1]);
-		num2 = atoi(argv[2]);
-		result = num1 * num2;
-		printf("%d\n", result);
-
-		return (0);
-	}
+	printf("%d\n", result);
+	return (0);
 }

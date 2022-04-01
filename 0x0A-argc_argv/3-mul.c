@@ -1,17 +1,28 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - a program that prints all arguments it receives.
- * @argc: arguments' counter.
- * @argv: arguments' values.
+ * main - a program that multiplies two numbers.
+ * argc: arguments' counter.
+ * argv: arguments' values.
  * Return: Always 0.
  */
 int main(int argc, char **argv)
 {
-	while (argc--)
+	int num1, num2, result;
+
+	if (argc != 3)
 	{
-		printf("%s\n", *argv++);
+		printf("Error\n");
+		return (1);
 	}
-	return (0);
+	else
+	{
+		num1 = atoi(argv[1]);
+		num2 = atoi(argv[2]);
+		result = num1 * num2;
+		printf("%d\n", result);
+
+		return (0);
+	}
 }
