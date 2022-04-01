@@ -8,7 +8,7 @@
  * @argv: arguments' values.
  * Return: Always 0.
  */
-int main (int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int num, result = 0, i;
 
@@ -16,7 +16,7 @@ int main (int argc, char **argv)
 	{
 		for (i = 0; argv[argc][i]; i++)
 		{
-			if (!(isdigit (argv[argc][i])))
+			if (!(isdigit(argv[argc][i])))
 			{
 				printf("Error\n");
 				return (1);
