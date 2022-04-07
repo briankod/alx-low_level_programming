@@ -22,6 +22,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (s2 == NULL)
 		s2 = "";
 
+	while (s2[lens2])
+		lens2++;
+
 	if (n >= lens2)
 		n = lens2;
 
