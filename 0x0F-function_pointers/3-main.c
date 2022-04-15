@@ -7,7 +7,7 @@
  * main - program to perform simple operations.
  * @argc: argument count.
  * @argv: array of arguments.
- * Return: exists 0 normally, 98 on argc error, 99 on illegal operator
+ * Return: exits 0 normally, 98 on argc error, 99 on illegal operator
  */
 int main(int argc, char *argv[])
 {
