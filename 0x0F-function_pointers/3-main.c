@@ -1,10 +1,11 @@
 #include "3-calc.h"
 
 /**
- * main - program to perform simple operations.
+ * main - check the code for Holberton School students.
  * @argc: argument count.
- * @argv: array of arguments.
- * Return: exits 0 normally, 98 on argc error, 99 on illegal operator
+ * @argv: argument vector.
+ *
+ * Return: Always 0.
  */
 int main(int argc, char *argv[])
 {
