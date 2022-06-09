@@ -10,7 +10,7 @@ size_t print_dlistint(const dlistint_t *h)
 {
 	size_t Nodes = 0;
 	const dlistint_t *curr;
-	
+
 	curr = h;
 	while (curr != NULL)
 	{
