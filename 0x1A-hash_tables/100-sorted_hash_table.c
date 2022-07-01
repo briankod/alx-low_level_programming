@@ -33,36 +33,6 @@ shash_table_t *shash_table_create(unsigned long int size)
 }
 
 /**
- * shash_node_create - function that creates node for the sorted hash table
- * @key: The key, string
- * @value: The value associated with the key
- * Return: a pointer to the created node or NULL
- */
-shash_node_t *shash_node_create(const char *key, const char *value)
-{
-	shash_node_t *node;
-
-	node = malloc(sizeof(shash_node_t));
-	if (node == NULL)
-		return (NULL);
-	node->key = strdup(key);
-	if (node->key == NULL)
-	{
-		free(node);
-		return (NULL);
-	}
-	node->value = strdup(value);
-	if (node->value == NULL)
-	{
-		free(node->key);
-		free(node);
-		return (NULL);
-	}
-	node->next = node->snext = node->sprev = NULL;
-	return (node);
-}
-
-/**
  * insert_to_sorted_list - inserts a node to the sorted linked list by key's ASCII
  * @sht: The sorted hash table
  * @node: The node to be inserted
@@ -122,7 +92,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 	node->key = dup_key;
 	node->value = dup_val;
-	node->next = NULL;
+	node->next = node->snext = node->sprev = NULL;
 	index = key_index((unsigned char *)key, ht->size);
 	if (ht->array[index] != NULL)
 	{
