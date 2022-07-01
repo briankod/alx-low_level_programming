@@ -80,7 +80,6 @@ typedef struct shash_table_s
 } shash_table_t;
 
 shash_table_t *shash_table_create(unsigned long int size);
-shash_node_t *shash_node_create(const char *key, const char *value);
 void insert_to_sorted_list(shash_table_t *sht, shash_node_t *node);
 int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 char *shash_table_get(const shash_table_t *ht, const char *key);
