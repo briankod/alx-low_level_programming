@@ -188,24 +188,20 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
  */
 void shash_table_print(const shash_table_t *ht)
 {
-	unsigned long int i;
 	shash_node_t *node;
 	char flag = 0;  /* if data not yet printed */
 
 	if (ht == NULL || ht->array == NULL)
 		return;
 	putchar('{');
-	for (i = 0; i < ht->size; i++)
+	node = ht->shead;
+	while (node != NULL)
 	{
-		node = ht->array[i];
-		while (node != NULL)
-		{
-			if (flag == 1)
-				printf(", ");
-			printf("'%s': '%s'", node->key, node->value);
-			flag = 1;
-			node = node->next;
-		}
+		if (flag == 1)
+			printf(", ");
+		printf("'%s': '%s'", node->key, node->value);
+		flag = 1;
+		node = node->snext;
 	}
 	printf("}\n");
 }
