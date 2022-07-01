@@ -92,7 +92,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 	node->key = dup_key;
 	node->value = dup_val;
-	node->next = node->snext = node->sprev = NULL;
+	node->next = NULL;
 	index = key_index((unsigned char *)key, ht->size);
 	if (ht->array[index] != NULL)
 	{
