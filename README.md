@@ -3,4 +3,4 @@
 
 # C programming with ALX
 
-- Created projects demonstrate C basics
+👾 Created projects demonstrate C basics
